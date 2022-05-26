@@ -1,0 +1,341 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'andy3' on host '51-0460659-h1' (Windows NT_amd64 version 6.2) on Thu May 26 10:43:02 +0800 2022
+INFO: [HLS 200-10] In directory 'E:/HLS/NoC/ap_ctrl_none_router'
+Sourcing Tcl script 'E:/HLS/NoC/ap_ctrl_none_router/project/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: open_project project 
+INFO: [HLS 200-10] Opening project 'E:/HLS/NoC/ap_ctrl_none_router/project'.
+INFO: [HLS 200-1510] Running: set_top system_top 
+INFO: [HLS 200-1510] Running: add_files src/system_top.h 
+INFO: [HLS 200-10] Adding design file 'src/system_top.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/system_top.cpp 
+INFO: [HLS 200-10] Adding design file 'src/system_top.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/router_top.h 
+INFO: [HLS 200-10] Adding design file 'src/router_top.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/router_top.cpp 
+INFO: [HLS 200-10] Adding design file 'src/router_top.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/output_unit.h 
+INFO: [HLS 200-10] Adding design file 'src/output_unit.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/output_unit.cpp 
+INFO: [HLS 200-10] Adding design file 'src/output_unit.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/input_unit.h 
+INFO: [HLS 200-10] Adding design file 'src/input_unit.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/input_unit.cpp 
+INFO: [HLS 200-10] Adding design file 'src/input_unit.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/flit_buffer.h 
+INFO: [HLS 200-10] Adding design file 'src/flit_buffer.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/define.h 
+INFO: [HLS 200-10] Adding design file 'src/define.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/arbiter.h 
+INFO: [HLS 200-10] Adding design file 'src/arbiter.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/arbiter.cpp 
+INFO: [HLS 200-10] Adding design file 'src/arbiter.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/pattern.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/pattern.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/testbench.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/util.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/util.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/util.h -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/util.h' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'E:/HLS/NoC/ap_ctrl_none_router/project/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name system_top system_top 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "D:/Xilinx/Vitis_HLS/2021.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling util.cpp_pre.cpp.tb.cpp
+   Compiling system_top.cpp_pre.cpp.tb.cpp
+   Compiling testbench.cpp_pre.cpp.tb.cpp
+   Compiling apatb_system_top.cpp
+   Compiling output_unit.cpp_pre.cpp.tb.cpp
+   Compiling arbiter.cpp_pre.cpp.tb.cpp
+   Compiling router_top.cpp_pre.cpp.tb.cpp
+   Compiling input_unit.cpp_pre.cpp.tb.cpp
+   Compiling apatb_system_top_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Golden flits[0] count:2680
+Golden flits[1] count:2340
+Golden flits[2] count:2455
+Golden flits[3] count:2525
+Out flit[0] count 2680
+Out flit[1] count 2340
+Out flit[2] count 2455
+Out flit[3] count 2525
+Total Cycle: 0
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+E:\HLS\NoC\ap_ctrl_none_router\project\solution1\sim\verilog>set PATH= 
+
+E:\HLS\NoC\ap_ctrl_none_router\project\solution1\sim\verilog>call D:/Xilinx/Vivado/2021.2/bin/xelab xil_defaultlib.apatb_system_top_top glbl -Oenable_linking_all_libraries  -prj system_top.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib "ieee_proposed=./ieee_proposed" -s system_top -debug wave 
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_system_top_top glbl -Oenable_linking_all_libraries -prj system_top.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_19 -L floating_point_v7_1_13 --lib ieee_proposed=./ieee_proposed -s system_top -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_input_flit_array_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_flit_array_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_input_flit_array_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_flit_array_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_input_flit_array_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_flit_array_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_input_flit_array_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_input_flit_array_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_output_flit_array_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_flit_array_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_output_flit_array_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_flit_array_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_output_flit_array_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_flit_array_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/AESL_automem_output_flit_array_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_output_flit_array_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_system_top_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_mux_532_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_mux_532_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_router_inst_input_unit_inst_VC_buffer_buffer_V_0_0_0_RAM_S2P_BRAM_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_router_inst_input_unit_inst_VC_buffer_buffer_V_0_0_0_RAM_S2P_BRAM_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_system_loop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_system_loop
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_system_loop_router_inst_input_unit_inst_VC_buffer_buffer_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_system_loop_router_inst_input_unit_inst_VC_buffer_buffer_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_update_combinational.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_update_combinational
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_update_sequential.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module system_top_update_sequential
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.system_top_router_inst_input_uni...
+Compiling module xil_defaultlib.system_top_flow_control_loop_pip...
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_1
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_2
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_3
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_4
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_5
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_s...
+Compiling module xil_defaultlib.system_top_mux_532_1_1_1(ID=1,di...
+Compiling module xil_defaultlib.system_top_update_combinational
+Compiling module xil_defaultlib.system_top_update_sequential
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_s...
+Compiling module xil_defaultlib.system_top
+Compiling module xil_defaultlib.AESL_automem_input_flit_array_0
+Compiling module xil_defaultlib.AESL_automem_input_flit_array_1
+Compiling module xil_defaultlib.AESL_automem_input_flit_array_2
+Compiling module xil_defaultlib.AESL_automem_input_flit_array_3
+Compiling module xil_defaultlib.AESL_automem_output_flit_array_0
+Compiling module xil_defaultlib.AESL_automem_output_flit_array_1
+Compiling module xil_defaultlib.AESL_automem_output_flit_array_2
+Compiling module xil_defaultlib.AESL_automem_output_flit_array_3
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_system_top_top
+Compiling module work.glbl
+Built simulation snapshot system_top
+
+****** xsim v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/system_top/xsim_script.tcl
+# xsim {system_top} -view {{system_top_dataflow_ana.wcfg}} -tclbatch {system_top.tcl} -protoinst {system_top.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file system_top.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top//AESL_inst_system_top_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_1_fu_2124/grp_system_top_Pipeline_1_fu_2124_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_2_fu_2568/grp_system_top_Pipeline_2_fu_2568_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_3_fu_2576/grp_system_top_Pipeline_3_fu_2576_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_4_fu_2584/grp_system_top_Pipeline_4_fu_2584_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_5_fu_2608/grp_system_top_Pipeline_5_fu_2608_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2632/grp_system_top_Pipeline_system_loop_fu_2632_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2632/grp_update_combinational_fu_7394/grp_update_combinational_fu_7394_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2632/grp_update_combinational_fu_7602/grp_update_combinational_fu_7602_activity
+Time resolution is 1 ps
+open_wave_config system_top_dataflow_ana.wcfg
+source system_top.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axi_slave) -into $coutputgroup]
+## add_wave /apatb_system_top_top/AESL_inst_system_top/cycle_count_ap_vld -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/cycle_count -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_3_ap_vld -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_3 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_2_ap_vld -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_2 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_1_ap_vld -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_1 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_0_ap_vld -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_count_0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_3_d0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_3_we0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_3_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_3_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_2_d0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_2_we0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_2_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_2_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_1_d0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_1_we0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_1_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_1_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_0_d0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_0_we0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_0_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/output_flit_array_0_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_local_deadlock -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_local_block -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(memory) -into $cinputgroup]
+## add_wave /apatb_system_top_top/AESL_inst_system_top/pattern_num -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_3_q0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_3_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_3_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_2_q0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_2_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_2_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_1_q0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_1_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_1_address0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_0_q0 -into $return_group -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_0_ce0 -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/AESL_inst_system_top/input_flit_array_0_address0 -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_start -into $blocksiggroup
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_done -into $blocksiggroup
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_idle -into $blocksiggroup
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_system_top_top/AESL_inst_system_top/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_system_top_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_system_top_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_system_top_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_input_flit_array_0 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_input_flit_array_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_input_flit_array_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_input_flit_array_3 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_array_0 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_array_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_array_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_array_3 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_count_0 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_count_1 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_count_2 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_output_flit_count_3 -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_pattern_num -into $tb_portdepth_group -radix hex
+## add_wave /apatb_system_top_top/LENGTH_cycle_count -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axi_slave) -into $tbcoutputgroup]
+## add_wave /apatb_system_top_top/cycle_count_ap_vld -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/cycle_count -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_3_ap_vld -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_3 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_2_ap_vld -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_2 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_1_ap_vld -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_1 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_0_ap_vld -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_count_0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_3_d0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_3_we0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_3_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_3_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_2_d0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_2_we0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_2_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_2_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_1_d0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_1_we0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_1_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_1_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_0_d0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_0_we0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_0_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/output_flit_array_0_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/ap_local_deadlock -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/ap_local_block -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(memory) -into $tbcinputgroup]
+## add_wave /apatb_system_top_top/pattern_num -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_3_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_3_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_3_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_2_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_2_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_2_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_1_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_1_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_1_address0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_0_q0 -into $tb_return_group -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_0_ce0 -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_system_top_top/input_flit_array_0_address0 -into $tb_return_group -radix hex
+## save_wave_config system_top.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "104665000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 104725 ns : File "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top.autotb.v" Line 996
+run: Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1209.922 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 34812 KB (Peak: 34812 KB), Simulation CPU Usage: 16218 ms
+INFO: [Common 17-206] Exiting xsim at Thu May 26 10:45:37 2022...
+INFO: [COSIM 212-316] Starting C post checking ...
+Golden flits[0] count:2680
+Golden flits[1] count:2340
+Golden flits[2] count:2455
+Golden flits[3] count:2525
+Out flit[0] count 2680
+Out flit[1] count 2340
+Out flit[2] count 2455
+Out flit[3] count 2525
+Total Cycle: 0
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 155.195 seconds; current allocated memory: 3.008 MB.
+INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 2 seconds. Total elapsed time: 158.126 seconds; peak allocated memory: 1.258 GB.
