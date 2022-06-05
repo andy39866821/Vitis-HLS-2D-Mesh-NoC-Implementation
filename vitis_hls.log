@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'andy3' on host '51-0460659-h1' (Windows NT_amd64 version 6.2) on Sun Jun 05 23:54:32 +0800 2022
+INFO: [HLS 200-10] For user 'andy3' on host '51-0460659-h1' (Windows NT_amd64 version 6.2) on Mon Jun 06 01:01:46 +0800 2022
 INFO: [HLS 200-10] In directory 'E:/HLS/NoC/ap_ctrl_none_router'
 Sourcing Tcl script 'E:/HLS/NoC/ap_ctrl_none_router/project/solution1/cosim.tcl'
 INFO: [HLS 200-1510] Running: open_project project 
@@ -310,9 +310,9 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : 1 / 1 [n/a] @ "35175000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 35235 ns : File "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top.autotb.v" Line 996
-run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1213.059 ; gain = 0.000
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 1211.051 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sun Jun  5 23:56:22 2022...
+INFO: [Common 17-206] Exiting xsim at Mon Jun  6 01:03:33 2022...
 INFO: [COSIM 212-316] Starting C post checking ...
 Golden flits[0] count:2680
 Golden flits[1] count:2340
@@ -325,5 +325,5 @@ Out flit[3] count 2525
 Total Cycle: 3475
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 107.615 seconds; current allocated memory: 1.844 MB.
-INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 3 seconds. Total elapsed time: 110.662 seconds; peak allocated memory: 1.258 GB.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 104.89 seconds; current allocated memory: 1.762 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 3 seconds. Total elapsed time: 107.877 seconds; peak allocated memory: 1.257 GB.

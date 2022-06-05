@@ -10,8 +10,6 @@ void system_top(
     int *cycle_count
 ){
     #pragma HLS INTERFACE ap_ctrl_hs port=return 
-    // #pragma HLS INTERFACE s_axilite port=pattern_num
-
 	#pragma HLS ARRAY_PARTITION variable=input_flit_array complete dim=1
 	#pragma HLS ARRAY_PARTITION variable=output_flit_array complete dim=1
 	#pragma HLS ARRAY_PARTITION variable=output_flit_count complete dim=1
@@ -23,30 +21,18 @@ void system_top(
         router_inst[i].set_ID((ID_t)i);
     }
     
-    
     int input_index[ROUTER_COUNT] = {0};
     int output_index[ROUTER_COUNT] = {0};
     int total_output_count = 0;
     int cycle = 0;
     
-	// #pragma HLS ARRAY_PARTITION variable=in_flit_data complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=in_flit_valid complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=in_VC_full complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=out_flit_data complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=out_flit_valid complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=out_VC_full complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=input_index complete dim=0
-	// #pragma HLS ARRAY_PARTITION variable=output_index complete dim=0
-
     bool   in_VC_full[ROUTER_COUNT][PORT_COUNT] = {0};  // output
-
     flit_t out_flit_data[ROUTER_COUNT][PORT_COUNT] = {0};    // output
     bool   out_flit_valid[ROUTER_COUNT][PORT_COUNT] = {0};   // output
 
     system_loop: 
     while(total_output_count < pattern_num*FLITS_PER_PACKET){
         #pragma HLS PIPELINE II=1
-        //#pragma HLS INLINE
 
         router_internal_wire wire_inst[ROUTER_COUNT];
         
@@ -65,7 +51,6 @@ void system_top(
                 in_flit_data[i][VC_NI] = 0;
                 in_flit_valid[i][VC_NI] = false;
             }
-            //printf("index:%d in_VC_full[%d][VC_NI]: %d\n", input_index[i], i, (int)in_VC_full[i][VC_NI]);
         }
 
         
@@ -131,9 +116,7 @@ void system_top(
             }
         }
 
-        
         router_update_block:{
-            
             #pragma HLS LATENCY max=0
             for(int i = 0 ; i < ROUTER_COUNT ; i++){
                 #pragma HLS UNROLL
@@ -156,18 +139,7 @@ void system_top(
                 );
             }
         }
-
-        
-                
-        //printf("Cycle:%d, total output count:%d\n", cycle, total_output_count);
-        // for(int i = 0 ; i < ROUTER_COUNT ; i++)
-        //     printf("Output[%d]: %d\n", i, output_index[i]);
-            
-        // for(int i = 0 ; i < PORT_COUNT ; i++)
-        //     printf("Output[0] valid[%d]: %d\n", i, (int)out_flit_valid[0][i]);
-        //printf("================\n");
         cycle++;
-
     }
 
     *cycle_count = cycle;

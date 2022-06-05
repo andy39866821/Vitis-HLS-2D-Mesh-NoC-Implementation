@@ -27,29 +27,24 @@ private:
 public:
 	
     flit_buffer(){
-        //#pragma HLS array_partition variable=buffer complete // Register files
 		#pragma HLS bind_storage variable=buffer type=RAM_S2P impl=BRAM latency=1
 	}
 	bool empty(){
-        //#pragma HLS INTERFACE ap_ctrl_none port=return
     	#pragma HLS INLINE
 		return (lengh == 0);
 	}
 
 	bool full(){
     	#pragma HLS INLINE
-        //#pragma HLS INTERFACE ap_ctrl_none port=return
 		return (lengh == FIFO_DEPTH);
 	}
 	
 	int size(){
     	#pragma HLS INLINE
-        //#pragma HLS INTERFACE ap_ctrl_none port=return
 		return lengh;
 	}
 
 	flit_t front(){
-        //#pragma HLS INTERFACE ap_ctrl_none port=return
     	#pragma HLS INLINE
 		return preloaded_data;
 	}
@@ -64,7 +59,6 @@ public:
     	#pragma HLS INLINE
 		if(read == true){
 			output_wire->read_index_next = (read_index == FIFO_DEPTH-1 ? 0 : read_index+1);
-			//printf("Update buffer read idx\n");
 		}
 		else {
 			output_wire->read_index_next = read_index;
@@ -75,7 +69,6 @@ public:
 			output_wire->write_data = data;
 			output_wire->write_addr = write_index;
 			output_wire->write_enable = true;
-			//printf("Update buffer write idx (origin: %d)\n", write_index);
 		}
 		else {
 			
@@ -96,7 +89,6 @@ public:
 	void update_sequential(
 		flit_buffer_internal_wire input_wire
 	){
-        //#pragma HLS INTERFACE ap_ctrl_none port=return
 
     	#pragma HLS INLINE
 	
@@ -107,7 +99,6 @@ public:
 		if(input_wire.write_enable)
 			buffer[input_wire.write_addr] = input_wire.write_data;
 
-			
 	}
 };
 

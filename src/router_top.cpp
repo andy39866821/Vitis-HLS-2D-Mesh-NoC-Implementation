@@ -116,9 +116,6 @@ void router_top::update_combinational(
             &(in_VC_full[i]),
             &(output_wire->input_unit_wire[i])
         );
-
-        //printf("in_flit_valid[%d]:%d\n", i, in_flit_valid[i]);
-        
     }
 
     //================================
@@ -151,8 +148,6 @@ void router_top::update_combinational(
             output_unit_in_flit_data[i],
             output_unit_in_flit_valid[i],
             out_VC_full[i],
-            // &out_flit_data[i],
-            // &out_flit_valid[i],
             &(out_flit_data[i]),
             &(out_flit_valid[i]),
             &(output_wire->output_unit_wire[i])
@@ -168,9 +163,6 @@ void router_top::update_sequential(
 ){
     #pragma HLS INTERFACE ap_ctrl_none port=return 
     #pragma HLS INTERFACE ap_none port=input_wire
-
-
-    //#pragma HLS INLINE
     #pragma HLS INLINE
     
     for(int i = 0 ; i < PORT_COUNT ; i++){
