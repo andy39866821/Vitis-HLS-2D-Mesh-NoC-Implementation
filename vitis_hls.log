@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'andy3' on host '51-0460659-h1' (Windows NT_amd64 version 6.2) on Thu May 26 10:43:02 +0800 2022
+INFO: [HLS 200-10] For user 'andy3' on host '51-0460659-h1' (Windows NT_amd64 version 6.2) on Sun Jun 05 23:54:32 +0800 2022
 INFO: [HLS 200-10] In directory 'E:/HLS/NoC/ap_ctrl_none_router'
 Sourcing Tcl script 'E:/HLS/NoC/ap_ctrl_none_router/project/solution1/cosim.tcl'
 INFO: [HLS 200-1510] Running: open_project project 
@@ -69,7 +69,7 @@ Out flit[0] count 2680
 Out flit[1] count 2340
 Out flit[2] count 2455
 Out flit[3] count 2525
-Total Cycle: 0
+Total Cycle: 3475
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
@@ -109,8 +109,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_route
 INFO: [VRFC 10-311] analyzing module system_top_flow_control_loop_pipe_sequential_init
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_mux_532_1_1_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module system_top_mux_532_1_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_router_inst_input_unit_inst_VC_buffer_buffer_V_0_0_0_RAM_S2P_BRAM_1R1W.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module system_top_router_inst_input_unit_inst_VC_buffer_buffer_V_0_0_0_RAM_S2P_BRAM_1R1W
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_2.v" into library xil_defaultlib
@@ -125,10 +123,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_route
 INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_system_loop
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_system_top_Pipeline_system_loop_router_inst_input_unit_inst_VC_buffer_buffer_bkb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module system_top_system_top_Pipeline_system_loop_router_inst_input_unit_inst_VC_buffer_buffer_bkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_update_combinational.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module system_top_update_combinational
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top_update_sequential.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module system_top_update_sequential
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
@@ -138,17 +132,14 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
-Compiling module xil_defaultlib.system_top_router_inst_input_uni...
+Compiling module xil_defaultlib.system_top_system_top_Pipeline_s...
 Compiling module xil_defaultlib.system_top_flow_control_loop_pip...
 Compiling module xil_defaultlib.system_top_system_top_Pipeline_1
 Compiling module xil_defaultlib.system_top_system_top_Pipeline_2
 Compiling module xil_defaultlib.system_top_system_top_Pipeline_3
 Compiling module xil_defaultlib.system_top_system_top_Pipeline_4
 Compiling module xil_defaultlib.system_top_system_top_Pipeline_5
-Compiling module xil_defaultlib.system_top_system_top_Pipeline_s...
 Compiling module xil_defaultlib.system_top_mux_532_1_1_1(ID=1,di...
-Compiling module xil_defaultlib.system_top_update_combinational
-Compiling module xil_defaultlib.system_top_update_sequential
 Compiling module xil_defaultlib.system_top_system_top_Pipeline_s...
 Compiling module xil_defaultlib.system_top
 Compiling module xil_defaultlib.AESL_automem_input_flit_array_0
@@ -160,7 +151,7 @@ Compiling module xil_defaultlib.AESL_automem_output_flit_array_1
 Compiling module xil_defaultlib.AESL_automem_output_flit_array_2
 Compiling module xil_defaultlib.AESL_automem_output_flit_array_3
 Compiling module xil_defaultlib.nodf_module_intf
-Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
 Compiling module xil_defaultlib.dataflow_monitor_1
 Compiling module xil_defaultlib.apatb_system_top_top
 Compiling module work.glbl
@@ -175,14 +166,12 @@ source xsim.dir/system_top/xsim_script.tcl
 # xsim {system_top} -view {{system_top_dataflow_ana.wcfg}} -tclbatch {system_top.tcl} -protoinst {system_top.protoinst}
 INFO: [Wavedata 42-565] Reading protoinst file system_top.protoinst
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top//AESL_inst_system_top_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_1_fu_2124/grp_system_top_Pipeline_1_fu_2124_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_2_fu_2568/grp_system_top_Pipeline_2_fu_2568_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_3_fu_2576/grp_system_top_Pipeline_3_fu_2576_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_4_fu_2584/grp_system_top_Pipeline_4_fu_2584_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_5_fu_2608/grp_system_top_Pipeline_5_fu_2608_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2632/grp_system_top_Pipeline_system_loop_fu_2632_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2632/grp_update_combinational_fu_7394/grp_update_combinational_fu_7394_activity
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2632/grp_update_combinational_fu_7602/grp_update_combinational_fu_7602_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_1_fu_2121/grp_system_top_Pipeline_1_fu_2121_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_2_fu_2565/grp_system_top_Pipeline_2_fu_2565_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_3_fu_2573/grp_system_top_Pipeline_3_fu_2573_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_4_fu_2581/grp_system_top_Pipeline_4_fu_2581_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_5_fu_2605/grp_system_top_Pipeline_5_fu_2605_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_system_top_top/AESL_inst_system_top/grp_system_top_Pipeline_system_loop_fu_2629/grp_system_top_Pipeline_system_loop_fu_2629_activity
 Time resolution is 1 ps
 open_wave_config system_top_dataflow_ana.wcfg
 source system_top.tcl
@@ -318,13 +307,12 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [n/a] @ "125000"
-// RTL Simulation : 1 / 1 [n/a] @ "104665000"
+// RTL Simulation : 1 / 1 [n/a] @ "35175000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 104725 ns : File "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top.autotb.v" Line 996
-run: Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1209.922 ; gain = 0.000
+$finish called at time : 35235 ns : File "E:/HLS/NoC/ap_ctrl_none_router/project/solution1/sim/verilog/system_top.autotb.v" Line 996
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1213.059 ; gain = 0.000
 ## quit
-INFO: xsimkernel Simulation Memory Usage: 34812 KB (Peak: 34812 KB), Simulation CPU Usage: 16218 ms
-INFO: [Common 17-206] Exiting xsim at Thu May 26 10:45:37 2022...
+INFO: [Common 17-206] Exiting xsim at Sun Jun  5 23:56:22 2022...
 INFO: [COSIM 212-316] Starting C post checking ...
 Golden flits[0] count:2680
 Golden flits[1] count:2340
@@ -334,8 +322,8 @@ Out flit[0] count 2680
 Out flit[1] count 2340
 Out flit[2] count 2455
 Out flit[3] count 2525
-Total Cycle: 0
+Total Cycle: 3475
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 155.195 seconds; current allocated memory: 3.008 MB.
-INFO: [HLS 200-112] Total CPU user time: 12 seconds. Total CPU system time: 2 seconds. Total elapsed time: 158.126 seconds; peak allocated memory: 1.258 GB.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 107.615 seconds; current allocated memory: 1.844 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 3 seconds. Total elapsed time: 110.662 seconds; peak allocated memory: 1.258 GB.

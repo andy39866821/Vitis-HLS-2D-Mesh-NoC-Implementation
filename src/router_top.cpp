@@ -65,7 +65,7 @@ void router_top::update_combinational(
 	#pragma HLS ARRAY_PARTITION variable=in_VC_full complete dim=1
 
 
-    //#pragma HLS INLINE
+    #pragma HLS INLINE
 
     //================================
     // Arbier
@@ -171,7 +171,7 @@ void router_top::update_sequential(
 
 
     //#pragma HLS INLINE
-    //#pragma HLS INLINE
+    #pragma HLS INLINE
     
     for(int i = 0 ; i < PORT_COUNT ; i++){
         #pragma HLS UNROLL

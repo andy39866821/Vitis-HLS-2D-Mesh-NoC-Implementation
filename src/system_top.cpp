@@ -166,11 +166,11 @@ void system_top(
         // for(int i = 0 ; i < PORT_COUNT ; i++)
         //     printf("Output[0] valid[%d]: %d\n", i, (int)out_flit_valid[0][i]);
         //printf("================\n");
-        //cycle++;
+        cycle++;
 
     }
 
-    *cycle_count = 0;
+    *cycle_count = cycle;
 
     output_flit_count_loop: 
     for(int i = 0 ; i < ROUTER_COUNT ; i++){
