@@ -17,6 +17,8 @@ private:
     int flit_counter[PORT_COUNT] = {0};
 
 public:
+    arbiter(/* args */);
+
     void update_combinational(
         bool output_VC_full[PORT_COUNT],
         bool request[PORT_COUNT][PORT_COUNT],
